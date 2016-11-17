@@ -24,6 +24,8 @@ install:
 script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
+  # Check yaml syntax
+  - pip install yamllint && yamllint .
 
 notifications:
   webhooks:
